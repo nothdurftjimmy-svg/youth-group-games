@@ -141,6 +141,7 @@ class YouthGroupGamesApp {
 
     formatGameType(type) {
         const types = {
+            'amongus': 'Among Us (Multiplayer)',
             'trivia': 'Trivia Quiz',
             'timer': 'Timer Challenge',
             'random': 'Random Picker',
@@ -171,6 +172,9 @@ class YouthGroupGamesApp {
         const container = document.getElementById('game-container');
         
         switch(game.type) {
+            case 'amongus':
+                new AmongUsGame(game, container);
+                break;
             case 'trivia':
                 container.innerHTML = this.renderTriviaGame(game);
                 break;
