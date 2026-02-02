@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Youth Group Games</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Youth Group Games</h1>
+        <p>Fun games for your youth group!</p>
+    </header>
+
+    <main>
+        <section id="home-screen" class="screen active">
+            <h2>Select a Game</h2>
+            <div id="games-menu" class="games-grid">
+                <!-- Games will be dynamically added here -->
+            </div>
+            <button id="add-game-btn" class="btn btn-primary">+ Add New Game</button>
+        </section>
+
+        <section id="game-screen" class="screen">
+            <button id="back-btn" class="btn btn-secondary">← Back to Games</button>
+            <div id="game-container">
+                <!-- Active game content will be loaded here -->
+            </div>
+        </section>
+
+        <section id="add-game-screen" class="screen">
+            <h2>Create New Game</h2>
+            <form id="new-game-form">
+                <div class="form-group">
+                    <label for="game-name">Game Name:</label>
+                    <input type="text" id="game-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="game-type">Game Type:</label>
+                    <select id="game-type" required>
+                        <option value="">Select a type...</option>
+                        <option value="trivia">Trivia Quiz</option>
+                        <option value="timer">Timer Challenge</option>
+                        <option value="random">Random Picker</option>
+                        <option value="points">Points Tracker</option>
+                        <option value="custom">Custom Game</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="game-description">Description:</label>
+                    <textarea id="game-description" rows="3"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Create Game</button>
+                    <button type="button" id="cancel-game-btn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Youth Group Games App | Created with ❤️ for your youth group</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
